@@ -1,0 +1,21 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.mainDiv{
+    margin-top: 70px;
+    margin-left: 20%;
+    border: 1px solid black;
+    width: 60%;
+    height: 300px;
+}
+h2{
+    margin-left:40% ;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+.input{
+    width: 40%;
+}

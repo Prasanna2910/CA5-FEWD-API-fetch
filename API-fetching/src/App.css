@@ -1,0 +1,46 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.headerDiv {
+  /* border: 1px solid black; */
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  margin-left: 50px;
+}
+.searchBar {
+  width: 50%;
+}
+.BooksDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 40px;
+  margin-left: 60px;
+  text-align: center;
+  margin-top: 55px;
+}
+p {
+  font-size: 10px;
+}
+.titleText {
+  font-size: 13px;
+}
+.img {
+  border: 1px solid black;
+  width: 140px;
+  height: 200px;
+}
+
+.elementsDiv {
+  width: 143px;
+  text-align: center;
+}
+.kalviumImage {
+  padding: 0px;
+  border: 1px solid black;
+  font-size: 18px;
+  width: 140px;
+  height: 40px;
+}
