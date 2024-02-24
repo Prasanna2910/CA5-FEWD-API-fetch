@@ -3,14 +3,30 @@
   padding: 0px;
 }
 .headerDiv {
-  /* border: 1px solid black; */
+  align-items: center;
   display: flex;
   width: 90%;
   justify-content: space-between;
   margin-left: 50px;
 }
 .searchBar {
+  margin-top: 3px;
   width: 50%;
+  height: 30px;
+  border: 1px solid #1976d2;
+  background-color: white;
+  border-radius: 4px;
+  padding: 2px;
+}
+input[type='text']:focus {
+  border: none;
+}
+p {
+  color: black;
+}
+.registerbutton {
+  margin-top: 14px;
+  padding: 3px;
 }
 .BooksDiv {
   display: grid;
@@ -28,19 +44,54 @@ p {
   font-size: 13px;
 }
 .img {
-  border: 1px solid black;
-  width: 140px;
+  width: 160px;
   height: 200px;
 }
 
 .elementsDiv {
-  width: 143px;
+  padding: 12px;
+  margin-bottom: 100px;
+  width: 162px;
   text-align: center;
+  box-shadow: 0px 0px 15px black;
 }
-.kalviumImage {
-  padding: 0px;
-  border: 1px solid black;
+.kalviumIMG {
+  margin-top: 7px;
   font-size: 18px;
-  width: 140px;
-  height: 40px;
+  width: 120px;
+  height: 35px;
+}
+@media all and (min-width: 320px) and (max-width: 600px) {
+  .kalviumIMG {
+    margin-top: 7px;
+    font-size: 18px;
+    width: 120px;
+    height: 35px;
+    /* display: none; */
+  }
+  .headerDiv {
+    align-items: center;
+    display: flex;
+    width: 240%;
+    justify-content: space-between;
+    margin-left: 50px;
+  }
+  .BooksDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 130px;
+    margin-left: 130px;
+    text-align: center;
+    margin-top: 55px;
+  }
+  .elementsDiv {
+    padding: 12px;
+    margin-bottom: 100px;
+    margin-top: 30px;
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    box-shadow: 0px 0px 15px black;
+  }
 }

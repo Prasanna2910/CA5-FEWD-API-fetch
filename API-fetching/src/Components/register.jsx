@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './register.css';
+import { Link, Route, Routes } from 'react-router-dom';
+import Home from './Home';
 
 function Register() {
   const [Nameerror, setNameerror] = useState(false);
@@ -21,9 +23,12 @@ function Register() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setNameerror(false);
+    setEmailError(false);
+    setWholeError(false);
     const { Name, Email, Password, ResetPassword } = form;
 
-    if (Name === ' ') {
+    if (Name === '') {
       setNameerror(true);
       return;
     }
@@ -31,14 +36,21 @@ function Register() {
       setEmailError(true);
       return;
     }
-    if (Password == ' ' || ResetPassword == ' ' || Password !== ResetPassword) {
+    if (Password === '' || ResetPassword === '') {
       setWholeError(true);
       return;
     }
-    setSuccess(true);
+    if (Password !== ResetPassword) {
+      setWholeError(true);
+      return;
+    }
+    if (!Nameerror && !EmailError && !wholeError) {
+      setSuccess(true);
+      return;
+    }
   };
   return (
-    <div className="mainDiv">
+    <div className="mainDiv" >
       <h2>Create Account</h2>
       <form onSubmit={handleSubmit}>
         <h3>Name</h3>
@@ -52,7 +64,6 @@ function Register() {
           />
           {Nameerror ? (
             <p style={{ color: 'red', fontSize: '15px' }}>
-              {' '}
               Please enter your name
             </p>
           ) : null}
@@ -101,10 +112,31 @@ function Register() {
           ) : null}
         </div>
         <div>
-          <button type="submit">Submit</button>
+          <div>
+            {Success ? (
+              <Link to="/">
+                <button type="submit" className="SubmitBtn">
+                  Submit
+                </button>
+              </Link>
+            ) : (
+              <button type="submit" className="SubmitBtn">
+                Submit
+              </button>
+            )}
+          </div>
         </div>
       </form>
-      {Success ? <p style={{ color: 'green' }}>Registered</p> : null}
+      <div
+        style={{ backgroundColor: 'green', width: '50%' }}
+        className="regDiv"
+      >
+        {Success ? (
+          <p style={{ color: 'black' }} className="Registered">
+            Registered
+          </p>
+        ) : null}
+      </div>
     </div>
   );
 }
