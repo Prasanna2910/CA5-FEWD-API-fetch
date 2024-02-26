@@ -44,7 +44,7 @@ function Home() {
   }, []);
   console.log(data);
   return (
-    <div>
+    <div className="main">
       <div>
         <div className="headerDiv">
           <img
