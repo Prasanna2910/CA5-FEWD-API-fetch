@@ -50,9 +50,20 @@ function Register() {
     }
   };
   return (
-    <div className="mainDiv" >
+    <div className="mainDiv">
       <h2>Create Account</h2>
+
       <form onSubmit={handleSubmit}>
+        <div
+          style={{ backgroundColor: '#5EE9FF', width: '60%' }}
+          className="regDiv"
+        >
+          {Success ? (
+            <p style={{ color: 'black' }} className="Registered">
+              Registered
+            </p>
+          ) : null}
+        </div>
         <h3>Name</h3>
         <div>
           <input
@@ -127,16 +138,6 @@ function Register() {
           </div>
         </div>
       </form>
-      <div
-        style={{ backgroundColor: 'green', width: '50%' }}
-        className="regDiv"
-      >
-        {Success ? (
-          <p style={{ color: 'black' }} className="Registered">
-            Registered
-          </p>
-        ) : null}
-      </div>
     </div>
   );
 }
