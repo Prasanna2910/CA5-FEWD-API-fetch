@@ -69,6 +69,7 @@ input[type='password']:focus {
   border: 0.5px solid rgb(33, 150, 243);
   border-radius: 4px;
 }
+/* design suitable for responsiveness done using media queries */
 @media all and (min-width: 320px) and (max-width: 600px) {
   .mainDiv {
     padding: 30px;

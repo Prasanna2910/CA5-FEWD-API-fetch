@@ -1,9 +1,12 @@
+// importing all the requirements
 import React, { useState } from 'react';
 import './register.css';
 import { Link, Route, Routes } from 'react-router-dom';
 import Home from './Home';
 
+// creating a function called REgister to add all the functionality and for UI design
 function Register() {
+  // using hooks for modifying a state
   const [Nameerror, setNameerror] = useState(false);
   const [EmailError, setEmailError] = useState(false);
   const [wholeError, setWholeError] = useState(false);
@@ -28,6 +31,7 @@ function Register() {
     setWholeError(false);
     const { Name, Email, Password, ResetPassword } = form;
 
+    // assigning conditions for the form validation
     if (Name === '') {
       setNameerror(true);
       return;
@@ -141,4 +145,5 @@ function Register() {
     </div>
   );
 }
+// exporting the component
 export default Register;

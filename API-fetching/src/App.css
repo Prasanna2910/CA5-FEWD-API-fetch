@@ -18,6 +18,13 @@
   border-radius: 4px;
   padding: 2px;
 }
+.Books{
+  /* border: 1px solid black; */
+  color: rgb(228, 30, 30);
+  position: absolute;
+  left: 175px;
+  top: 24px;
+}
 input[type='text']:focus {
   border: none;
 }
@@ -61,6 +68,7 @@ p {
   width: 120px;
   height: 35px;
 }
+/* design suitable for responsiveness done using media queries */
 @media all and (min-width: 315px) and (max-width: 600px) {
   .searchBar {
     margin-top: 8px;
@@ -84,6 +92,9 @@ p {
     justify-content: space-between;
     margin-left: 50px;
     margin-top: 10px;
+  }
+  .Books{
+    display: none;
   }
   .BooksDiv {
     display: grid;
